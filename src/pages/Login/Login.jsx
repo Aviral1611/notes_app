@@ -17,6 +17,15 @@ const Login = () => {
       setError("Invalid email")
       return;
     }
+
+    if(!password){
+      setError("Password is required")
+      return;
+    }
+
+    setError("")
+
+    //Login API
   }
 
 

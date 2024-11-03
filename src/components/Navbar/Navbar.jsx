@@ -1,4 +1,5 @@
 import React from 'react'
+import ProfileInfo from '../Cards/ProfileInfo'
 
 const Navbar = () => {
   return (
@@ -6,6 +7,7 @@ const Navbar = () => {
       <h2 className='text-xl font-medium text-black py-2'>
         Notes
       </h2>
+      <ProfileInfo/>
     </div>
   )
 }

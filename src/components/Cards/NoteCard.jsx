@@ -14,19 +14,19 @@ const NoteCard = ({
     onPinNote,
 }) => {
   return (
-    <div>
-      <div className=''>
+    <div className='border rounded p-4 bg-white hover:shadow-xl transition-all ease-in-out'>
+      <div className='flex items-center justify-between'>
         <div>
             <h6 className='text-sm font-medium'>{title}</h6>
             <span className='text-xs text-slate-500'>{date}</span>
         </div>
 
-        <MdOutlinePushPin className='' onClick = {onPinNote} />
+        <MdOutlinePushPin className={`icon-btn ${isPinned ? 'text-primary' : 'text-slate-300'}`} onClick = {onPinNote} />
       </div>
 
-      <p className=''>{content?.slice(0,60)}</p>
+      <p className='text-xs text-slate-500 mt-2'>{content?.slice(0,60)}</p>
 
-      <div className=''>
+      <div className='flex items-center justify-between mt-2'>
         <div className='text-xs text-slate-500'>
             {tags}
         </div>
